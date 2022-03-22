@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utilizando CSS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Css() {
+        const texto1 = {
+          color: 'blue',
+          backgroundColor: 'yellow',
+          padding: '30px',
+          margin: '10px',
+          textAlign: 'center',
+          borderRadius: '15px',
+          opacity: '0.8'
+        }
+        const texto2 = {
+          color: 'red',
+          backgroundColor: 'black',
+          padding: '20px',
+          borderStyle: 'double',
+          borderColor: 'red'
+        }
+        const texto3 = {
+          color: 'green',
+          textAlign: 'right',
+          padding: '80px',
+          backgroundColor: 'grey',
+          fontWeight: 'bold',
+          borderRadius: '80px',
+          borderStyle: 'dashed'
+        }
+
+        return (
+          <div>
+            <p style={texto1}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+              nostrum unde nemo perferendis, eaque autem, exercitationem esse
+              sint odit explicabo, aperiam eum vel ratione aspernatur ullam
+              dolorum deleniti amet veniam!
+            </p>
+            <p style={texto2}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+              officia dolorem esse libero quaerat. Provident optio reprehenderit
+              doloremque eveniet veniam tenetur. Culpa assumenda quasi inventore
+              nobis est aspernatur eaque facere!
+            </p>
+            <p style={texto3}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+              ipsum, et consectetur labore inventore corrupti ratione modi ex.
+              Eligendi voluptas perferendis non nesciunt earum adipisci incidunt
+              quis repudiandae eaque odio.
+            </p>
+          </div>
+        )
+      }
+
+      const root = document.getElementById('root')
+
+      ReactDOM.render(<Css />, root)
+    </script>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>

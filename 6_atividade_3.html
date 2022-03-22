@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operações básicas</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      /*      function Soma(props) {
+        return (
+          <p>
+            Soma: {props.primeiroValor} + {props.segundoValor} =
+            {props.primeiroValor + props.segundoValor}
+          </p>
+        )
+      }
+*/
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <h3>Resultados</h3>
+              <p>
+                Soma: {this.props.primeiroValor} + {this.props.segundoValor} =
+                {this.props.primeiroValor + this.props.segundoValor}
+              </p>
+              <p>
+                Subtração: {this.props.primeiroValor} -{this.props.segundoValor}
+                = {this.props.primeiroValor - this.props.segundoValor}
+              </p>
+              <p>
+                Multiplicação: {this.props.primeiroValor} *
+                {this.props.segundoValor} =
+                {this.props.primeiroValor * this.props.segundoValor}
+              </p>
+              <p>
+                Divisão: {this.props.primeiroValor} / {this.props.segundoValor}=
+                {this.props.primeiroValor / this.props.segundoValor}
+              </p>
+            </div>
+          )
+        }
+      }
+
+      const root = document.getElementById('root')
+
+      ReactDOM.render(<App primeiroValor={5} segundoValor={10} />, root)
+    </script>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>

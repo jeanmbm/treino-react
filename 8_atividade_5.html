@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vários componentes</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Comp1() {
+        return <p>Olá Mundo!</p>
+      }
+
+      function Comp2() {
+        return <p>Vamos aprender React.</p>
+      }
+
+      class Comp3 extends React.Component {
+        constructor(props) {
+          super(props)
+          this.state = { date: '02/03' }
+        }
+
+        render() {
+          return (
+            <p>
+              Vou festar no carnaval do dia: {this.props.comecoCarnaval} até:{' '}
+              {this.state.date}
+            </p>
+          )
+        }
+      }
+
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <Comp1 />
+              <Comp2 />
+              <Comp3 comecoCarnaval={'26/02'} />
+            </div>
+          )
+        }
+      }
+
+      const root = document.getElementById('root')
+
+      ReactDOM.render(<App />, root)
+    </script>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>

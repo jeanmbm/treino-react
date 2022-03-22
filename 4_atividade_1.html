@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 1</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function MinhasInformações() {
+        let nome = 'Jean Moreira'
+        let curso = 'Sistemas de Informação'
+        let periodo = '5°'
+        let idade = 19
+
+        return (
+          <div>
+            <App />
+            <h1>Minhas informações</h1>
+            <p>
+              Olá, me chamo {nome}
+              <br></br>
+              Tenho {idade} anos
+              <br></br>
+              Estou cursando {curso}
+              <br></br>
+              Estou no {periodo} período
+            </p>
+          </div>
+        )
+      }
+
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Olá React</h1>
+              <p>Está é uma classe</p>
+            </div>
+          )
+        }
+      }
+
+      const root = document.getElementById('root')
+
+      ReactDOM.render(<MinhasInformações />, root)
+    </script>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </body>
+</html>
